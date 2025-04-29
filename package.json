@@ -9,6 +9,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
     "astro": "^5.7.9"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.7",
+    "aos": "^2.3.4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3"
   }
 }

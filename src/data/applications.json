@@ -1,0 +1,34 @@
+{
+  "applications": [
+    {
+      "id": 1,
+      "title": "Analyse Multispectrale Avancée",
+      "description": "Démonstration de la puissance de l'imagerie hyperspectrale avec AVIRIS-NG : au-delà de l'image RGB classique, nos capteurs analysent des centaines de bandes spectrales pour révéler l'invisible et classifier précisément les matériaux.",
+      "icon": "🎯"
+    },
+    {
+      "id": 2,
+      "title": "Surveillance forestière",
+      "description": "Détection précoce des maladies des arbres et suivi de la santé des forêts grâce à l'analyse spectrale de la végétation.",
+      "icon": "🌳"
+    },
+    {
+      "id": 3,
+      "title": "Analyse des sols",
+      "description": "Cartographie précise de la composition des sols et de leur teneur en nutriments pour une agriculture optimisée.",
+      "icon": "🌱"
+    },
+    {
+      "id": 4,
+      "title": "Détection de polluants",
+      "description": "Identification et suivi des pollutions marines et terrestres pour une meilleure protection de l'environnement.",
+      "icon": "🌊"
+    },
+    {
+      "id": 5,
+      "title": "Défense et sécurité",
+      "description": "Surveillance du territoire et détection d'anomalies pour la sécurité nationale.",
+      "icon": "🛡️"
+    }
+  ]
+} 

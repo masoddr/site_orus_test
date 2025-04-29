@@ -1,0 +1,103 @@
+---
+// Contact section with form and information
+---
+
+<section id="contact" class="section-padding bg-space-dark">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-space-silver mb-6">
+        Contactez-nous
+      </h2>
+      <p class="text-xl text-space-silver/80 max-w-2xl mx-auto">
+        Intéressé par notre technologie ? Parlons de vos besoins.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <!-- Contact Form -->
+      <div class="bg-space-dark/50 backdrop-blur-sm rounded-lg p-8" data-aos="fade-right">
+        <form class="space-y-6">
+          <div>
+            <label for="name" class="block text-space-silver mb-2">Nom</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-2 bg-space-blue/20 border border-space-purple/30 rounded-lg text-space-silver focus:outline-none focus:border-space-purple"
+            />
+          </div>
+          
+          <div>
+            <label for="email" class="block text-space-silver mb-2">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-2 bg-space-blue/20 border border-space-purple/30 rounded-lg text-space-silver focus:outline-none focus:border-space-purple"
+            />
+          </div>
+
+          <div>
+            <label for="message" class="block text-space-silver mb-2">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              class="w-full px-4 py-2 bg-space-blue/20 border border-space-purple/30 rounded-lg text-space-silver focus:outline-none focus:border-space-purple"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-space-purple hover:bg-space-blue text-white px-6 py-3 rounded-lg transition-colors"
+          >
+            Envoyer
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="space-y-8" data-aos="fade-left">
+        <div>
+          <h3 class="text-2xl font-bold text-space-silver mb-4">Coordonnées</h3>
+          <div class="space-y-4 text-space-silver/80">
+            <p class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-space-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              80 Rte des Lucioles, 06560 Sophia
+            </p>
+            <p class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-space-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              contact@orus-space.fr
+            </p>
+            <p class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-space-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              +33 9 70 82 02 50
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold text-space-silver mb-4">Suivez-nous</h3>
+          <div class="flex space-x-4">
+            <a href="https://www.linkedin.com/company/orusspace/" class="text-space-silver/80 hover:text-space-purple transition-colors" target="_blank" rel="noopener noreferrer">
+              <span class="sr-only">LinkedIn</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

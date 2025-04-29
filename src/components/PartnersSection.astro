@@ -1,0 +1,64 @@
+---
+// Import partners data
+import partnersData from '../data/partners.json';
+const { partners } = partnersData;
+
+// Group partners by type
+const publicPartners = partners.filter(p => p.type === 'public');
+const privatePartners = partners.filter(p => p.type === 'private');
+---
+
+<section id="partners" class="section-padding bg-gradient-to-b from-space-blue to-space-dark">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-space-silver mb-6">
+        Nos Partenaires
+      </h2>
+      <p class="text-xl text-space-silver/80 max-w-2xl mx-auto">
+        Une collaboration entre acteurs publics et privés pour une innovation d'excellence
+      </p>
+    </div>
+
+    <!-- Public Partners -->
+    <div class="mb-16">
+      <h3 class="text-xl text-space-silver/80 text-center mb-8">Institutions Publiques</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {publicPartners.map((partner) => (
+          <div 
+            class="bg-space-dark/50 backdrop-blur-sm rounded-lg p-6 flex items-center justify-center"
+            data-aos="fade-up"
+            data-aos-delay={partner.id * 100}
+          >
+            <img 
+              src={partner.logo} 
+              alt={partner.name}
+              class="max-h-16 w-auto filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+            />
+            <span class="sr-only">{partner.description}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Private Partners -->
+    <div>
+      <h3 class="text-xl text-space-silver/80 text-center mb-8">Partenaires Industriels</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {privatePartners.map((partner) => (
+          <div 
+            class="bg-space-dark/50 backdrop-blur-sm rounded-lg p-6 flex items-center justify-center"
+            data-aos="fade-up"
+            data-aos-delay={partner.id * 100}
+          >
+            <img 
+              src={partner.logo} 
+              alt={partner.name}
+              class="max-h-16 w-auto filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+            />
+            <span class="sr-only">{partner.description}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section> 

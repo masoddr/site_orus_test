@@ -1,0 +1,63 @@
+---
+// Import applications data
+import applicationsData from '../data/applications.json';
+const { applications } = applicationsData;
+---
+
+<section id="applications" class="relative section-padding overflow-hidden">
+  <!-- Background image -->
+  <div class="absolute inset-0">
+    <img 
+      src="/images/sections/applications-background.jpg" 
+      alt="Applications background"
+      class="w-full h-full object-cover"
+      data-aos="zoom-out"
+      data-aos-duration="2000"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-space-dark/70 via-space-dark/60 to-space-dark/80"></div>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-space-silver mb-6">
+        Applications concrètes
+      </h2>
+      <p class="text-xl text-space-silver/90 max-w-2xl mx-auto backdrop-blur-sm">
+        Des solutions innovantes pour répondre aux défis environnementaux et sociétaux
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {applications.map((app, index) => (
+        <div 
+          class="bg-space-dark/30 backdrop-blur-md rounded-lg p-8 border border-space-silver/20 hover:bg-space-dark/40 transition-all duration-300"
+          data-aos="fade-up"
+          data-aos-delay={index * 100}
+        >
+          <div class="w-16 h-16 bg-space-purple/30 rounded-lg flex items-center justify-center mb-6 backdrop-blur-sm">
+            <span class="text-4xl">{app.icon}</span>
+          </div>
+          <h3 class="text-2xl font-bold text-space-silver mb-4">{app.title}</h3>
+          <p class="text-space-silver/90 mb-6">
+            {app.description}
+          </p>
+          <a 
+            href="#contact" 
+            class="inline-flex items-center text-space-silver hover:text-space-purple transition-colors group"
+          >
+            En savoir plus
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .group:hover .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem);
+  }
+</style> 

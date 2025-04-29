@@ -1,0 +1,32 @@
+{
+  "partners": [
+    {
+      "id": 1,
+      "name": "CNES",
+      "logo": "/images/partners/cnes-logo.png",
+      "type": "public",
+      "description": "Centre National d'Études Spatiales"
+    },
+    {
+      "id": 2,
+      "name": "Thales Alenia Space",
+      "logo": "/images/partners/thales-logo.png",
+      "type": "private",
+      "description": "Leader mondial des solutions satellitaires"
+    },
+    {
+      "id": 3,
+      "name": "ONERA",
+      "logo": "/images/partners/onera-logo.png",
+      "type": "public",
+      "description": "Office National d'Études et de Recherches Aérospatiales"
+    },
+    {
+      "id": 4,
+      "name": "CNRS",
+      "logo": "/images/partners/cnrs-logo.png",
+      "type": "public",
+      "description": "Centre National de la Recherche Scientifique"
+    }
+  ]
+} 

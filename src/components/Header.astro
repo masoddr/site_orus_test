@@ -1,0 +1,61 @@
+---
+// Header component with responsive navigation
+---
+
+<header class="fixed w-full z-50 bg-space-dark/90 backdrop-blur-sm">
+  <div class="container mx-auto px-4 py-4">
+    <nav class="flex items-center justify-between">
+      <a href="/" class="text-2xl font-bold text-space-silver flex items-center gap-2">
+        <img src="/images/logo/logo.png" alt="Logo Orus" class="h-8 w-auto" />
+        <span class="text-space-purple">ORUS</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#about" class="text-space-silver hover:text-space-purple transition-colors">À propos</a>
+        <a href="#technology" class="text-space-silver hover:text-space-purple transition-colors">Technologie</a>
+        <a href="#applications" class="text-space-silver hover:text-space-purple transition-colors">Applications</a>
+        <a href="#partners" class="text-space-silver hover:text-space-purple transition-colors">Partenaires</a>
+        <a href="#contact" class="bg-space-purple hover:bg-space-blue text-white px-4 py-2 rounded-lg transition-colors">Contact</a>
+      </div>
+
+      <!-- Mobile Navigation Button -->
+      <button id="mobile-menu-button" class="block md:hidden text-space-silver hover:text-space-purple">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden md:hidden absolute left-0 right-0 top-full bg-space-dark/95 backdrop-blur-md">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col gap-4 py-4">
+          <a href="#about" class="text-space-silver hover:text-space-purple transition-colors">À propos</a>
+          <a href="#technology" class="text-space-silver hover:text-space-purple transition-colors">Technologie</a>
+          <a href="#applications" class="text-space-silver hover:text-space-purple transition-colors">Applications</a>
+          <a href="#partners" class="text-space-silver hover:text-space-purple transition-colors">Partenaires</a>
+          <a href="#contact" class="bg-space-purple hover:bg-space-blue text-white px-4 py-2 rounded-lg transition-colors inline-block">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement;
+    if (!target.closest('#mobile-menu') && !target.closest('#mobile-menu-button')) {
+      mobileMenu?.classList.add('hidden');
+    }
+  });
+</script> 

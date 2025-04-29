@@ -1,0 +1,68 @@
+---
+// Hero section with Earth background and main title
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Background image -->
+  <div class="absolute inset-0">
+    <img 
+      src="/images/photorealistic-earth-planet.jpg" 
+      alt="Vue de la Terre depuis l'espace"
+      class="w-full h-full object-cover"
+    />
+  </div>
+
+  <!-- Background overlay with gradient -->
+  <div class="absolute inset-0 bg-gradient-to-b from-space-dark/80 via-space-dark/60 to-space-dark"></div>
+  
+  <!-- Stars animation (optional) -->
+  <div class="absolute inset-0" aria-hidden="true">
+    <div class="stars"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+      <h1 class="text-4xl md:text-6xl font-bold text-space-silver mb-6">
+        Orus – L'œil hyperspectral du futur
+      </h1>
+      <p class="text-xl md:text-2xl text-space-silver/90 mb-8">
+        Une révolution dans l'observation spatiale pour un monde plus durable
+      </p>
+      <a 
+        href="#technology" 
+        class="inline-block bg-space-purple hover:bg-space-blue text-white px-8 py-4 rounded-lg text-lg transition-colors backdrop-blur-sm"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        Découvrir la technologie
+      </a>
+    </div>
+  </div>
+
+  <!-- Decorative elements -->
+  <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-space-dark to-transparent"></div>
+</section>
+
+<style>
+  .stars {
+    background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+                      radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+                      radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+                      radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+                      radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: stars-animation 100s linear infinite;
+    opacity: 0.3;
+  }
+
+  @keyframes stars-animation {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-2000px);
+    }
+  }
+</style> 
